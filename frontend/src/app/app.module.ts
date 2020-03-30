@@ -1,24 +1,28 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 
+import { MaterialModule } from './material-module';
 import { AppComponent } from './app.component';
 import { DashbroadComponent } from './dashbroad/dashbroad.component';
 import { LibraryComponent } from './library/library.component';
 import { SideNavigatorComponent } from './side-navigator/side-navigator.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashbroadComponent,
     LibraryComponent,
-    SideNavigatorComponent
+    SideNavigatorComponent,
+    ToolbarComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    MatToolbarModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
